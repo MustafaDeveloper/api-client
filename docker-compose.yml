@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+    react:
+        build: .
+        ports:
+            - 3000:3000
+
+    json-server:
+        build: .
+        ports:
+            - 3001:3001
+        command: json-server --watch db.json --port 3001
